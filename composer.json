@@ -1,0 +1,21 @@
+{
+    "name": "yassine-khachlek/laravel-package-example",
+    "description": "A Laravel package example.",
+    "authors": [
+        {
+            "name": "Yassine Khachlek",
+            "email": "yassine.khachlek@gmail.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.6.4"
+    },
+    "autoload": {
+        "classmap": [
+            "src/"
+        ],
+        "psr-4": {
+            "Yk\\LaravelPackageExample\\": "src/"
+        }
+    }
+}
