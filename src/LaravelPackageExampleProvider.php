@@ -69,9 +69,18 @@ class LaravelPackageExampleProvider extends ServiceProvider
         $kernel->pushMiddleware('Yk\LaravelPackageExample\App\Http\Middleware\MiddlewareExample');
 
         /**
-         * Register migrations, so they will be automatically run when the php artisan migrate command is executed
+         * Register migrations, so they will be automatically run when the php artisan migrate command is executed.
          */
         $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+
+        /**
+         * Register commands, so you may execute them using the Artisan CLI.
+         */
+        if ($this->app->runningInConsole()) {
+            $this->commands([
+                \Yk\LaravelPackageExample\App\Console\Commands\Hello::class,
+            ]);
+        }
 
     }
 

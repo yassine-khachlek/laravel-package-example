@@ -5,7 +5,8 @@ And example of a Laravel package.
 - Load controllers
 - Load routes
 - Load views
-- Load migrations
+- Register migrations
+- Register commands
 - Push middleware
 - Bind Facade
 - Publish configurations, resources, assets
@@ -13,21 +14,10 @@ And example of a Laravel package.
 
 ### Installation
 
-Add the package name to your composer.json:
-
-```javascript
-{
-    "require": {
-    	...,
-        "yassine-khachlek/laravel-package-example": "dev-master"
-    }
-}
-```
-
-Then update using composer:
+Install wia composer:
 
 ```
-composer update
+composer require yassine-khachlek/laravel-package-example
 ```
 
 And add the service provider in config/app.php:
