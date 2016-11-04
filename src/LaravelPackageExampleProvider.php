@@ -14,7 +14,10 @@ class LaravelPackageExampleProvider extends ServiceProvider
     public function boot()
     {
         // Include the package classmap autoloader
-        include __DIR__.'/../vendor/autoload.php';
+        if (\File::exists(__DIR__.'/../vendor/autoload.php'))
+        {
+            include __DIR__.'/../vendor/autoload.php';
+        }
 
         /**
         * Routes
@@ -57,6 +60,7 @@ class LaravelPackageExampleProvider extends ServiceProvider
         ], 'public');
 
         // Publish configurations to config/vendor/vendor-name/package-name
+        // Config::get('vendor.yk.laravel-package-example')
         $this->publishes([
             __DIR__.'/config' => config_path('vendor/yk/laravel-package-example'),
         ]);

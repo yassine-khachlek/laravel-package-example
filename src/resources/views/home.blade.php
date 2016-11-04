@@ -42,5 +42,9 @@
 
 	{{ FacadeExample::get() }} through FacadeExample
 
+	<h2>Image</h2>
+
+	<img src="{{ $image->encode('data-url') }}">
+
 </body>
 </html>
