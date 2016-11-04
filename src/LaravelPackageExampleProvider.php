@@ -68,6 +68,11 @@ class LaravelPackageExampleProvider extends ServiceProvider
         $kernel = $this->app['Illuminate\Contracts\Http\Kernel'];
         $kernel->pushMiddleware('Yk\LaravelPackageExample\App\Http\Middleware\MiddlewareExample');
 
+        /**
+         * Register migrations, so they will be automatically run when the php artisan migrate command is executed
+         */
+        $this->loadMigrationsFrom(__DIR__.'/database/migrations');
+
     }
 
     /**

@@ -5,10 +5,11 @@ And example of a Laravel package.
 - Load controllers
 - Load routes
 - Load views
-- Use another package
+- Load migrations
 - Push middleware
 - Bind Facade
 - Publish configurations, resources, assets
+- Use another package
 
 ### Installation
 
